@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keep Food Fresh 5X Longer - Vauken Vacuum Storage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f9f9f9;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-weight: bold;
+            line-height: 1.2;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #ff6b6b;
+            color: white;
+            padding: 18px 45px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.3em;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            cursor: pointer;
+            border: none;
+        }
+        
+        .cta-button:hover {
+            background: #ff5252;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .problem-section {
+            background: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .problem-section h2 {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .problem-item {
+            padding: 30px;
+            background: #fff5f5;
+            border-radius: 10px;
+            border-left: 4px solid #ff6b6b;
+        }
+        
+        .problem-item h3 {
+            color: #ff6b6b;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+        
+        .product-showcase {
+            padding: 80px 20px;
+            background: linear-gradient(to bottom, #f9f9f9, #fff);
+        }
+        
+        .product-showcase h2 {
+            text-align: center;
+            font-size: 2.8em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .product-showcase .tagline {
+            text-align: center;
+            font-size: 1.3em;
+            color: #666;
+            margin-bottom: 50px;
+        }
+        
+        .product-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 300px;
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+            color: #999;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .product-image::after {
+            content: 'Click to View on Amazon';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(102, 126, 234, 0.9);
+            color: white;
+            padding: 15px;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+        
+        .product-card:hover .product-image::after {
+            transform: translateY(0);
+        }
+        
+        .product-info {
+            padding: 25px;
+        }
+        
+        .product-info h3 {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .features-section {
+            background: white;
+            padding: 80px 20px;
+        }
+        
+        .features-section h2 {
+            text-align: center;
+            font-size: 2.8em;
+            margin-bottom: 60px;
+            color: #333;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
+        
+        .feature-item {
+            text-align: center;
+            padding: 30px;
+            background: #f9f9f9;
+            border-radius: 15px;
+            transition: all 0.3s;
+        }
+        
+        .feature-item:hover {
+            background: #667eea;
+            color: white;
+            transform: scale(1.05);
+        }
+        
+        .feature-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        
+        .feature-item h3 {
+            font-size: 1.6em;
+            margin-bottom: 15px;
+        }
+        
+        .benefits-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .benefits-section h2 {
+            font-size: 2.8em;
+            margin-bottom: 40px;
+        }
+        
+        .benefits-list {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+            font-size: 1.2em;
+            line-height: 2;
+        }
+        
+        .benefits-list li {
+            margin-bottom: 20px;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .benefits-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4ade80;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+        
+        .cta-section {
+            background: #ff6b6b;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            font-size: 1.5em;
+            margin-bottom: 40px;
+        }
+        
+        .urgency {
+            background: rgba(255,255,255,0.2);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px auto;
+            max-width: 600px;
+            font-size: 1.2em;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+            
+            .hero .subtitle {
+                font-size: 1.2em;
+            }
+            
+            .product-showcase h2,
+            .features-section h2,
+            .benefits-section h2 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="container">
+            <h1>Stop Throwing Away Fresh Food!</h1>
+            <p class="subtitle">Keep Your Food Fresh 5X Longer with Electric Vacuum Technology</p>
+            <a href="#" class="cta-button" onclick="return false;">SEE IT ON AMAZON →</a>
+        </div>
+    </div>
+
+    <div class="problem-section">
+        <div class="container">
+            <h2>Tired of Wasting Money on Spoiled Food?</h2>
+            <p style="font-size: 1.3em; color: #666; margin-bottom: 20px;">The average family throws away $1,500 worth of food every year...</p>
+            
+            <div class="problem-grid">
+                <div class="problem-item">
+                    <h3>💸 Money Down the Drain</h3>
+                    <p>Watching fresh produce, meat, and leftovers go bad before you can eat them</p>
+                </div>
+                <div class="problem-item">
+                    <h3>🥬 Wilted & Stale</h3>
+                    <p>Food loses freshness within days in regular containers</p>
+                </div>
+                <div class="problem-item">
+                    <h3>🗑️ Guilt & Waste</h3>
+                    <p>Feeling bad about throwing away perfectly good food</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-showcase">
+        <div class="container">
+            <h2>Introducing the Vauken Premium Vacuum Storage System</h2>
+            <p class="tagline">The Smart Way to Preserve Food Freshness</p>
+            
+            <div class="product-images">
+                <a href="#" class="product-card" onclick="return false;">
+                    <div class="product-image">
+                        [Product Image 1]<br>Replace with actual product photo
+                    </div>
+                    <div class="product-info">
+                        <h3>Complete 5-Piece Set</h3>
+                        <p>Everything you need to start preserving food freshness today</p>
+                    </div>
+                </a>
+                
+                <a href="#" class="product-card" onclick="return false;">
+                    <div class="product-image">
+                        [Product Image 2]<br>Replace with vacuum pump photo
+                    </div>
+                    <div class="product-info">
+                        <h3>Electric Vacuum Pump</h3>
+                        <p>One-touch operation removes air in seconds</p>
+                    </div>
+                </a>
+                
+                <a href="#" class="product-card" onclick="return false;">
+                    <div class="product-image">
+                        [Product Image 3]<br>Replace with food storage photo
+                    </div>
+                    <div class="product-info">
+                        <h3>Airtight Containers</h3>
+                        <p>Keep fruits, vegetables, meats & more fresh for weeks</p>
+                    </div>
+                </a>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="#" class="cta-button" onclick="return false;">GET YOURS ON AMAZON NOW →</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="features-section">
+        <div class="container">
+            <h2>Why Vauken Stands Out</h2>
+            
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Electric Vacuum</h3>
+                    <p>Removes air automatically at the push of a button - no manual pumping required</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">🔒</div>
+                    <h3>100% Airtight Seal</h3>
+                    <p>Premium silicone gaskets keep oxygen out and freshness locked in</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">📦</div>
+                    <h3>5-Piece Set</h3>
+                    <p>Multiple sizes for all your storage needs - from snacks to full meals</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">🧊</div>
+                    <h3>Fridge & Freezer Safe</h3>
+                    <p>Durable BPA-free materials designed for long-term use</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">✨</div>
+                    <h3>Crystal Clear</h3>
+                    <h3>See what's inside at a glance - no more mystery containers</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">🧼</div>
+                    <h3>Easy to Clean</h3>
+                    <p>Dishwasher safe for hassle-free maintenance</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="benefits-section">
+        <div class="container">
+            <h2>What You'll Love</h2>
+            
+            <ul class="benefits-list">
+                <li><strong>Save Hundreds of Dollars</strong> by reducing food waste by up to 80%</li>
+                <li><strong>Keep Food Fresh 5X Longer</strong> than traditional containers</li>
+                <li><strong>Reduce Grocery Trips</strong> by buying in bulk and storing longer</li>
+                <li><strong>Maintain Nutrients & Flavor</strong> by preventing oxidation</li>
+                <li><strong>Organize Your Fridge</strong> with stackable, space-saving design</li>
+                <li><strong>Meal Prep Like a Pro</strong> and enjoy fresh-tasting food all week</li>
+                <li><strong>Help the Environment</strong> by reducing food waste and plastic use</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="cta-section">
+        <div class="container">
+            <h2>Ready to Stop Wasting Food?</h2>
+            <p>Join thousands of satisfied customers preserving freshness</p>
+            
+            <div class="urgency">
+                ⚡ Amazon Prime Eligible - Get it in 2 Days!
+            </div>
+            
+            <a href="#" class="cta-button" style="background: white; color: #ff6b6b;" onclick="return false;">ORDER NOW ON AMAZON →</a>
+            
+            <p style="margin-top: 30px; font-size: 1.1em;">✓ Free Returns  ✓ Prime Shipping  ✓ Thousands of 5-Star Reviews</p>
+        </div>
+    </div>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
